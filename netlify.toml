@@ -8,11 +8,11 @@
   APP_DEBUG = "false"
   APP_KEY = "base64:Uq5f4lT+nu4kRrNNVySNsx4NgZBxvei5Fdw35MYGGC4=" 
   DB_CONNECTION = "mysql"
-  DB_HOST = "127.0.0.1"
+  DB_HOST = "xq7t6tasopo9xxbs.cbetxkdyhwsb.us-east-1.rds.amazonaws.com"
   DB_PORT = "3306"
-  DB_DATABASE = "pos"
-  DB_USERNAME = "root"
-  DB_PASSWORD = 
+  DB_DATABASE = "ed980eh2w91yeo17"
+  DB_USERNAME = "pyfyg5zhvj5ukotp"
+  DB_PASSWORD = "czzegpd42rkfnxmk"
 
 [[plugins]]
   package = "@netlify/plugin-php"
