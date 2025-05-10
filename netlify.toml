@@ -1,18 +1,35 @@
 [build]
-  command = "composer install --no-dev && php artisan key:generate"
-  publish = "public"
+command = "echo 'no op'"
+publish = "example"
 
-[environment]
-  PHP_VERSION = "8.2"
-  APP_ENV = "production"
-  APP_DEBUG = "false"
-  APP_KEY = "base64:Uq5f4lT+nu4kRrNNVySNsx4NgZBxvei5Fdw35MYGGC4=" 
-  DB_CONNECTION = "mysql"
-  DB_HOST = "xq7t6tasopo9xxbs.cbetxkdyhwsb.us-east-1.rds.amazonaws.com"
-  DB_PORT = "3306"
-  DB_DATABASE = "ed980eh2w91yeo17"
-  DB_USERNAME = "pyfyg5zhvj5ukotp"
-  DB_PASSWORD = "czzegpd42rkfnxmk"
+[build.environment]
+NODE_VERSION = "20"
 
 [[plugins]]
-  package = "@netlify/plugin-php"
+package = "./src/index.js"
+
+[plugins.inputs]
+output_path = "reports/lighthouse.html"
+
+# Note: Required for our Cypress smoke tests
+fail_deploy_on_score_thresholds = "true"
+
+[plugins.inputs.thresholds]
+performance = 0.9
+
+[[plugins.inputs.audits]]
+output_path = "reports/route1.html"
+serveDir = "route1"
+[[plugins.inputs.audits]]
+serveDir = "route2"
+[[plugins.inputs.audits]]
+serveDir = ""
+
+[[plugins]]
+package = "netlify-plugin-cypress"
+# do not run tests after deploy
+[plugins.inputs]
+enable = false
+# run tests after build
+[plugins.inputs.postBuild]
+enable = true
