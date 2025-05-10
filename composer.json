@@ -9,10 +9,9 @@
     ],
     "license": "MIT",
     "require": {
-        "illuminate/console": "^10.0",
         "php": "^8.2",
-        "barryvdh/laravel-dompdf": "^2.0",
-        "brotzka/laravel-dotenv-editor": "^2.1",
+        "barryvdh/laravel-dompdf": "^2.2",
+        "brotzka/laravel-dotenv-editor": "^2.2",
         "doctrine/dbal": "^3.5",
         "guzzlehttp/guzzle": "^7.2",
         "infyomlabs/adminlte-templates": "^6.0",
@@ -30,7 +29,7 @@
         "spatie/laravel-query-builder": "^5.1"
     },
     "require-dev": {
-        "barryvdh/laravel-ide-helper": "2.13",
+        "barryvdh/laravel-ide-helper": "^2.13",
         "fakerphp/faker": "^1.9.1",
         "laravel/sail": "^1.18",
         "mockery/mockery": "^1.4.4",
