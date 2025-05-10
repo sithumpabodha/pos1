@@ -1,0 +1,24 @@
+@import "../components/variables"; // Importing variables if needed.
+
+.print-data {
+    margin: 0 !important;
+    table {
+        width: 100% !important; // Ensures the table takes up the full width of the paper
+        margin: 0 !important;
+        tr {
+            margin: 0 !important;
+            th {
+                font-size: 10px !important; // Smaller font size for headers
+                padding: 0 !important; // Remove padding for a compact layout
+                text-align: left !important; // Align headers to the left
+            }
+            td {
+                margin: 0 !important;
+                border: 0 !important; // Ensure no borders are printed
+                font-size: 10px !important; // Smaller font size for cells
+                padding: 0 !important; // Remove padding for a compact layout
+                text-align: left !important; // Align content to the left
+            }
+        }
+    }
+}
