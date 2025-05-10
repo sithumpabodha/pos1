@@ -2,23 +2,17 @@
   command = "composer install --no-dev && php artisan key:generate"
   publish = "public"
 
-[build.environment]
+[environment]
   PHP_VERSION = "8.2"
   APP_ENV = "production"
   APP_DEBUG = "false"
-  APP_KEY = ""
+  APP_KEY = "base64:Uq5f4lT+nu4kRrNNVySNsx4NgZBxvei5Fdw35MYGGC4=" 
   DB_CONNECTION = "mysql"
-<<<<<<< HEAD
+  DB_HOST = "127.0.0.1"
+  DB_PORT = "3306"
   DB_DATABASE = "pos"
   DB_USERNAME = "root"
-  DB_PASSWORD =
-=======
-  DB_DATABASE = "your_db_name"
-  DB_USERNAME = "your_db_user"
-  DB_PASSWORD = "your_db_password"
->>>>>>> 825c5385115fa09b3db622b9b84c618c5695b85a
+  DB_PASSWORD = 
 
-[[redirects]]
-  from = "/*"
-  to = "/index.php"
-  status = 200
+[[plugins]]
+  package = "@netlify/plugin-php"
