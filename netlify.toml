@@ -1,0 +1,18 @@
+[build]
+  command = "composer install --no-dev && php artisan key:generate"
+  publish = "public"
+
+[build.environment]
+  PHP_VERSION = "8.2"
+  APP_ENV = "production"
+  APP_DEBUG = "false"
+  APP_KEY = ""
+  DB_CONNECTION = "mysql"
+  DB_DATABASE = "pos"
+  DB_USERNAME = "root"
+  DB_PASSWORD =
+
+[[redirects]]
+  from = "/*"
+  to = "/index.php"
+  status = 200
